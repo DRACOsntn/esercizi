@@ -15,8 +15,8 @@ for i in range(0,20):
 #visualizzare poi con un print il numero
 massimo=x[0]
 indice_max=0
-#minimo=y[0]
-#inidce_min=0
+minimo=y[0]
+inidce_min=0
 
 for i in range (0,20):
     if x[i]>massimo:
@@ -28,7 +28,7 @@ for i in range(0,20):
     if y[i]<minimo:
         minimo=y[i]
         indice_min=i
-        #print(minimo,x[indice_min])
+print(minimo,x[indice_min])
 
 
 
@@ -36,8 +36,24 @@ punti_cartesiano=[]
 for i in range (0,20):
     punto=(random.randint(0,10),random.randint(0,10))
     punti_cartesiano.append(punto)
-            
+    
+    
+    
 #come accedere alla x del primo punto
-#print(punti_cartesiano[0][0])
+print(punti_cartesiano[0][0])
 #come accedere alla y del primo punto
-#print(punti_cartesiano[0][1])
+print(punti_cartesiano[0][1])
+
+
+massimo=punti_cartesiano[0]
+
+for i in range (0,20):
+    if punti_cartesiano[i][0]>massimo[0]:
+        massimo=punti_cartesiano[i]
+print(massimo)
+
+minimo=punti_cartesiano[0]
+for i in range (0,20):
+    if punti_cartesiano[i][1]<minimo[1]:
+        minimo=punti_cartesiano[i]
+print(minimo)
