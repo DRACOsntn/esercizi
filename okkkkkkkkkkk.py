@@ -22,4 +22,18 @@ def nPari (lista):
 lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 nPari(lista)
 
+
+
+# scrivere una procedura che data una lista e un numero chiamato alfa stampi a video il
+#numero degli elementi della lista piu granndi di alfa
+
+def contaMaggioreAlfa(lista,alfa):
+    contatore = 0
+    for element in lista:
+        if element  > alfa:
+            contatore = contatore + 1
+lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+contaMaggioreAlfa(lista,alfa)
+
+
     
