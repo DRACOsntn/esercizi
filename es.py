@@ -15,7 +15,35 @@ def leggiFile (pathInput):
             temperature.append(elemento)
     return(temperature)
 
+#media con uso del ciclo for
+def media (lista):
+    somma = 0
+    for i in range (0,len(lista)):
+        somma = somma + lista[i]
+    media_c = somma/ len(lista)
+    print(media_c)
 
+#media con uso dell'iteratore
+#def media_iterator (lista):
+   # somma = 0
+    #for element in lista:
+     #   somma = somma + element
+    #media_c = somma/ len(lista)
+    #print(media_c)
+def varianza (lista):       
+    n = len(lista)
+    return (media)
+    scarti_quadrati = [(x - media) ** 2 for x in dati]
+    return sum(scarti_quadrati) / n
+
+
+
+        
+        
+        
+        
+        
+# richiamo la funzione
 lista = leggiFile("temperature.csv")
-            
-    
+# richiamo la procedura
+media(lista)
