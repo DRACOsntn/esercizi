@@ -1,3 +1,4 @@
+
 class Atomo:
     def __init__ (self, massa, simbolo, numero_atomico):
         #simbolo, numero_atomico e massa sono attributi pubblici
@@ -32,15 +33,31 @@ class Atomo:
     def print_tutto(self):
         print(self.__orbitale)
         print(self.massa)
-    
         
     
+    def gasNobili(self,lista):
+        gas_N=False
+        for i in range (0, len(lista)):
+            if self.numero_atomico==lista[i]:
+               gas_N=True
+        if gas_N==True:
+            print("l'atomo è un gas nobile")
+        else:
+            print("l'atomo non è un gas nobile")
+                
+        
+             
+    
+        
+lista=[2,10,18,36,54,118]
 idrogeno = Atomo(1.008, "H", 1)
 idrogeno.stabile()
 #per accedere dall'esterno ad un attributo pubblico basta usare la sintassi della riga successiva
 print(idrogeno.simbolo)
 #per accedere dall'esterno ad un attributo privato necessariamente devo implementare un metodo
 idrogeno.print_tutto()
+idrogeno.gasNobili(lista)
+
 
 try:
     ferro = Atomo(55.845, "Fe", 26)
