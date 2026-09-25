@@ -1,0 +1,23 @@
+import math
+
+class Punto:
+    def __init__ (self,x,y):
+        self.x=x
+        self.y=y
+        
+    
+    def distanza (self, secondoPunto):
+        distanza = math.sqrt((secondoPunto.x - self.x)**2 + (secondoPunto.y - self.y)**2)
+        print("la distanza è:")
+        print(distanza)
+        
+   
+J=Punto(6,7)
+B=Punto(7,6)
+J.distanza(B)
+
+   
+     
+    
+   
+        
