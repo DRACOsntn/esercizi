@@ -1,0 +1,48 @@
+import math
+
+class Punto:
+    def __init__ (self,x,y):
+        self.x=x
+        self.y=y
+        
+    def distanza (self, secondoPunto):
+        distanza = math.sqrt((secondoPunto.x - self.x)**2 + (secondoPunto.y - self.y)**2)
+        print("la distanza è:")
+        print(distanza)
+        
+    def is_ascissa(self):
+        Boolean1= False
+        if self.x>0:
+            Boolean1= True
+        else:
+            Boolean= False
+        
+        return(Boolean1)
+            
+    def is_ordinata(self):
+        Boolean2= False
+        if self.y>0:
+            Boolean2= True
+        else:
+            Boolean2= False
+        return(Boolean2)
+            
+    def prints(self, Boolean1, Boolean2):
+        if Boolean1==True:
+            print("l'ascissa è positiva")
+        else:
+            print("l'ascissa è negativa")
+        if Boolean2==True:
+            print("l'ordinata è positiva")
+        else:
+            print("l'ordinata è negativa")
+    
+    
+        
+   
+J=Punto(6,7)
+B=Punto(7,6)
+J.distanza(B)
+A=J.is_ascissa()
+C=J.is_ordinata()
+J.prints(A,C)
